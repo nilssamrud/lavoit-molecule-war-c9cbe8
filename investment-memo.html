@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Investment Memo — Lavoit</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
+:root{
+  --bg:#0a0a0a; --tx:#cdcdcd; --tx-bright:#ffffff; --tx-mut:#8f8f8f; --tx-faint:#5a5a5a;
+  --line:#1c1c1c; --accent:#F4DF50; --wrap:1080px; --measure:780px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+body{background:var(--bg);color:var(--tx);
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;
+  font-size:1.05rem;line-height:1.72;overflow-x:hidden;}
+::selection{background:var(--accent);color:#0a0a0a;}
+.bar{position:sticky;top:0;z-index:50;background:rgba(10,10,10,0.72);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
+.bar-in{max-width:var(--wrap);margin:0 auto;padding:18px clamp(22px,5vw,56px);
+  display:flex;align-items:center;justify-content:space-between;}
+svg.logo{height:15px;width:auto;display:block;}
+.nav{display:flex;gap:30px;font-size:0.82rem;}
+.nav a{color:var(--tx-mut);text-decoration:none;transition:color .2s;}
+.nav a:hover{color:var(--tx-bright);}
+.nav a.here{color:var(--tx-bright);}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 clamp(22px,5vw,56px);}
+.rule{border:none;border-top:1px solid var(--line);margin:0;}
+.hero{padding:64px 0 10px;}
+.hero .title{font-family:'Nanum Myeongjo',serif;font-weight:400;
+  font-size:clamp(2.0rem,4.2vw,2.9rem);line-height:1.08;color:var(--tx-bright);
+  max-width:var(--measure);margin:0 auto 22px;letter-spacing:-0.01em;}
+.hero .lede{font-family:'Nanum Myeongjo',serif;font-size:clamp(1.2rem,2.2vw,1.42rem);
+  line-height:1.5;color:#b3b3b3;max-width:var(--measure);margin:0 auto;}
+.hero .lede .hot{color:var(--tx-bright);}
+.hero .refs{max-width:var(--measure);margin:22px auto 0;font-size:0.9rem;color:var(--tx-mut);font-style:italic;}
+.hero .refs a{color:var(--tx);text-decoration:underline;}
+.hero .refs a:hover{color:var(--tx-bright);}
+section.s{padding:64px 0;}
+.s-head{max-width:var(--measure);margin:0 auto 30px;}
+.s-head h2{font-family:'Nanum Myeongjo',serif;font-weight:400;font-size:1.5rem;line-height:1.2;color:var(--tx-bright);}
+section.s p{max-width:var(--measure);margin:0 auto 22px;color:var(--tx);}
+section.s p strong{color:var(--tx-bright);font-weight:400;}
+ul.beliefs{list-style:none;margin:34px auto;max-width:var(--measure);}
+ul.beliefs li{padding:18px 0;border-top:1px solid var(--line);font-size:0.97rem;line-height:1.65;color:var(--tx);}
+ul.beliefs li:last-child{border-bottom:1px solid var(--line);}
+ul.beliefs li strong{color:var(--tx-bright);font-weight:400;}
+ol.numbered{list-style:none;counter-reset:rung;margin:34px auto;max-width:var(--measure);}
+ol.numbered li{counter-increment:rung;padding:20px 0 20px 50px;position:relative;border-top:1px solid var(--line);font-size:0.97rem;line-height:1.65;}
+ol.numbered li:last-child{border-bottom:1px solid var(--line);}
+ol.numbered li::before{content:counter(rung);position:absolute;left:0;top:19px;
+  font-family:'Nanum Myeongjo',serif;font-size:1.3rem;line-height:1;color:var(--accent);}
+ol.numbered li strong{color:var(--tx-bright);font-weight:400;}
+.tbl-wrap{margin:34px auto;overflow-x:auto;max-width:var(--measure);}
+table.data{width:100%;border-collapse:collapse;font-size:0.88rem;min-width:560px;}
+table.data th{text-align:left;font-weight:400;font-size:0.82rem;color:var(--tx-mut);
+  padding:12px 14px;border-bottom:1px solid var(--line);}
+table.data td{padding:14px;color:var(--tx);border-bottom:1px solid var(--line);text-align:left;vertical-align:top;line-height:1.6;}
+table.data td:first-child{color:var(--tx-bright);white-space:nowrap;}
+table.data td strong{color:var(--tx-bright);font-weight:400;}
+.punch{font-family:'Nanum Myeongjo',serif;color:var(--tx-bright);font-size:1.12rem;line-height:1.55;}
+.punch .a{color:var(--accent);}
+.foot{border-top:1px solid var(--line);padding:52px clamp(22px,5vw,56px);
+  display:flex;flex-direction:column;align-items:center;gap:14px;}
+.foot .sig{font-size:0.8rem;color:var(--tx-faint);}
+.foot a{color:var(--tx-mut);text-decoration:underline;font-size:0.85rem;}
+.foot a:hover{color:var(--tx-bright);}
+@media(max-width:680px){
+  body{font-size:1.0rem;line-height:1.7;}
+  .nav{gap:18px;font-size:0.78rem;}
+  section.s{padding:48px 0;}
+}
+</style>
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+<a href="index.html" style="display:block;"><svg class="logo" fill="none" viewbox="0 0 114 14" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.936 2.432H16.076V10.04H20.612V11H14.936V2.432ZM26.932 10.976C26.756 11.08 26.512 11.132 26.2 11.132C25.936 11.132 25.724 11.06 25.564 10.916C25.412 10.764 25.336 10.52 25.336 10.184C25.056 10.52 24.728 10.764 24.352 10.916C23.984 11.06 23.584 11.132 23.152 11.132C22.872 11.132 22.604 11.1 22.348 11.036C22.1 10.972 21.884 10.872 21.7 10.736C21.516 10.6 21.368 10.424 21.256 10.208C21.152 9.984 21.1 9.716 21.1 9.404C21.1 9.052 21.16 8.764 21.28 8.54C21.4 8.316 21.556 8.136 21.748 8C21.948 7.856 22.172 7.748 22.42 7.676C22.676 7.604 22.936 7.544 23.2 7.496C23.48 7.44 23.744 7.4 23.992 7.376C24.248 7.344 24.472 7.304 24.664 7.256C24.856 7.2 25.008 7.124 25.12 7.028C25.232 6.924 25.288 6.776 25.288 6.584C25.288 6.36 25.244 6.18 25.156 6.044C25.076 5.908 24.968 5.804 24.832 5.732C24.704 5.66 24.556 5.612 24.388 5.588C24.228 5.564 24.068 5.552 23.908 5.552C23.476 5.552 23.116 5.636 22.828 5.804C22.54 5.964 22.384 6.272 22.36 6.728H21.34C21.356 6.344 21.436 6.02 21.58 5.756C21.724 5.492 21.916 5.28 22.156 5.12C22.396 4.952 22.668 4.832 22.972 4.76C23.284 4.688 23.616 4.652 23.968 4.652C24.248 4.652 24.524 4.672 24.796 4.712C25.076 4.752 25.328 4.836 25.552 4.964C25.776 5.084 25.956 5.256 26.092 5.48C26.228 5.704 26.296 5.996 26.296 6.356V9.548C26.296 9.788 26.308 9.964 26.332 10.076C26.364 10.188 26.46 10.244 26.62 10.244C26.708 10.244 26.812 10.224 26.932 10.184V10.976ZM25.276 7.796C25.148 7.892 24.98 7.964 24.772 8.012C24.564 8.052 24.344 8.088 24.112 8.12C23.888 8.144 23.66 8.176 23.428 8.216C23.196 8.248 22.988 8.304 22.804 8.384C22.62 8.464 22.468 8.58 22.348 8.732C22.236 8.876 22.18 9.076 22.18 9.332C22.18 9.5 22.212 9.644 22.276 9.764C22.348 9.876 22.436 9.968 22.54 10.04C22.652 10.112 22.78 10.164 22.924 10.196C23.068 10.228 23.22 10.244 23.38 10.244C23.716 10.244 24.004 10.2 24.244 10.112C24.484 10.016 24.68 9.9 24.832 9.764C24.984 9.62 25.096 9.468 25.168 9.308C25.24 9.14 25.276 8.984 25.276 8.84V7.796ZM30.6773 11H29.5853L27.2813 4.796H28.4213L30.1613 9.968H30.1853L31.8773 4.796H32.9453L30.6773 11ZM34.6253 7.904C34.6253 8.28 34.6733 8.616 34.7693 8.912C34.8733 9.2 35.0133 9.444 35.1893 9.644C35.3653 9.836 35.5693 9.984 35.8013 10.088C36.0413 10.192 36.2933 10.244 36.5573 10.244C36.8213 10.244 37.0693 10.192 37.3013 10.088C37.5413 9.984 37.7493 9.836 37.9253 9.644C38.1013 9.444 38.2373 9.2 38.3333 8.912C38.4373 8.616 38.4893 8.28 38.4893 7.904C38.4893 7.528 38.4373 7.196 38.3333 6.908C38.2373 6.612 38.1013 6.364 37.9253 6.164C37.7493 5.964 37.5413 5.812 37.3013 5.708C37.0693 5.604 36.8213 5.552 36.5573 5.552C36.2933 5.552 36.0413 5.604 35.8013 5.708C35.5693 5.812 35.3653 5.964 35.1893 6.164C35.0133 6.364 34.8733 6.612 34.7693 6.908C34.6733 7.196 34.6253 7.528 34.6253 7.904ZM33.5453 7.904C33.5453 7.448 33.6093 7.024 33.7373 6.632C33.8653 6.232 34.0573 5.888 34.3133 5.6C34.5693 5.304 34.8853 5.072 35.2613 4.904C35.6373 4.736 36.0693 4.652 36.5573 4.652C37.0533 4.652 37.4853 4.736 37.8533 4.904C38.2293 5.072 38.5453 5.304 38.8013 5.6C39.0573 5.888 39.2493 6.232 39.3773 6.632C39.5053 7.024 39.5693 7.448 39.5693 7.904C39.5693 8.36 39.5053 8.784 39.3773 9.176C39.2493 9.568 39.0573 9.912 38.8013 10.208C38.5453 10.496 38.2293 10.724 37.8533 10.892C37.4853 11.052 37.0533 11.132 36.5573 11.132C36.0693 11.132 35.6373 11.052 35.2613 10.892C34.8853 10.724 34.5693 10.496 34.3133 10.208C34.0573 9.912 33.8653 9.568 33.7373 9.176C33.6093 8.784 33.5453 8.36 33.5453 7.904ZM41.8519 3.68H40.8319V2.432H41.8519V3.68ZM40.8319 4.796H41.8519V11H40.8319V4.796ZM44.8481 4.796H46.0841V5.696H44.8481V9.548C44.8481 9.668 44.8561 9.764 44.8721 9.836C44.8961 9.908 44.9361 9.964 44.9921 10.004C45.0481 10.044 45.1241 10.072 45.2201 10.088C45.3241 10.096 45.4561 10.1 45.6161 10.1H46.0841V11H45.3041C45.0401 11 44.8121 10.984 44.6201 10.952C44.4361 10.912 44.2841 10.844 44.1641 10.748C44.0521 10.652 43.9681 10.516 43.9121 10.34C43.8561 10.164 43.8281 9.932 43.8281 9.644V5.696H42.7721V4.796H43.8281V2.936H44.8481V4.796ZM50.7251 2.432H56.6411V3.392H51.8651V6.116H56.3171V7.076H51.8651V10.04H56.6771V11H50.7251V2.432ZM57.893 4.796H58.853V5.78H58.877C59.301 5.028 59.973 4.652 60.893 4.652C61.301 4.652 61.641 4.708 61.913 4.82C62.185 4.932 62.405 5.088 62.573 5.288C62.741 5.488 62.857 5.728 62.921 6.008C62.993 6.28 63.029 6.584 63.029 6.92V11H62.009V6.8C62.009 6.416 61.897 6.112 61.673 5.888C61.449 5.664 61.141 5.552 60.749 5.552C60.437 5.552 60.165 5.6 59.933 5.696C59.709 5.792 59.521 5.928 59.369 6.104C59.217 6.28 59.101 6.488 59.021 6.728C58.949 6.96 58.913 7.216 58.913 7.496V11H57.893V4.796ZM69.913 10.472C69.913 11.488 69.681 12.248 69.217 12.752C68.753 13.256 68.025 13.508 67.033 13.508C66.745 13.508 66.449 13.476 66.145 13.412C65.849 13.348 65.577 13.244 65.329 13.1C65.089 12.956 64.889 12.768 64.729 12.536C64.569 12.304 64.481 12.02 64.465 11.684H65.485C65.493 11.868 65.549 12.024 65.653 12.152C65.765 12.28 65.897 12.384 66.049 12.464C66.209 12.544 66.381 12.6 66.565 12.632C66.749 12.672 66.925 12.692 67.093 12.692C67.429 12.692 67.713 12.632 67.945 12.512C68.177 12.4 68.369 12.24 68.521 12.032C68.673 11.832 68.781 11.588 68.845 11.3C68.917 11.012 68.953 10.696 68.953 10.352V9.944H68.929C68.753 10.328 68.485 10.612 68.125 10.796C67.773 10.972 67.397 11.06 66.997 11.06C66.533 11.06 66.129 10.976 65.785 10.808C65.441 10.64 65.153 10.416 64.921 10.136C64.689 9.848 64.513 9.516 64.393 9.14C64.281 8.756 64.225 8.352 64.225 7.928C64.225 7.56 64.273 7.184 64.369 6.8C64.465 6.408 64.625 6.056 64.849 5.744C65.073 5.424 65.369 5.164 65.737 4.964C66.105 4.756 66.557 4.652 67.093 4.652C67.485 4.652 67.845 4.74 68.173 4.916C68.501 5.084 68.757 5.34 68.941 5.684H68.953V4.796H69.913V10.472ZM67.057 10.172C67.393 10.172 67.677 10.104 67.909 9.968C68.149 9.824 68.341 9.64 68.485 9.416C68.629 9.184 68.733 8.924 68.797 8.636C68.869 8.348 68.905 8.06 68.905 7.772C68.905 7.5 68.873 7.232 68.809 6.968C68.745 6.704 68.641 6.468 68.497 6.26C68.361 6.044 68.181 5.872 67.957 5.744C67.733 5.616 67.461 5.552 67.141 5.552C66.813 5.552 66.533 5.616 66.301 5.744C66.069 5.864 65.877 6.028 65.725 6.236C65.581 6.444 65.473 6.684 65.401 6.956C65.337 7.228 65.305 7.512 65.305 7.808C65.305 8.088 65.333 8.368 65.389 8.648C65.445 8.928 65.541 9.184 65.677 9.416C65.813 9.64 65.993 9.824 66.217 9.968C66.441 10.104 66.721 10.172 67.057 10.172ZM72.5316 3.68H71.5116V2.432H72.5316V3.68ZM71.5116 4.796H72.5316V11H71.5116V4.796ZM74.1118 4.796H75.0718V5.78H75.0958C75.5198 5.028 76.1918 4.652 77.1118 4.652C77.5198 4.652 77.8598 4.708 78.1318 4.82C78.4038 4.932 78.6238 5.088 78.7918 5.288C78.9598 5.488 79.0758 5.728 79.1398 6.008C79.2118 6.28 79.2478 6.584 79.2478 6.92V11H78.2278V6.8C78.2278 6.416 78.1158 6.112 77.8918 5.888C77.6678 5.664 77.3598 5.552 76.9678 5.552C76.6558 5.552 76.3838 5.6 76.1518 5.696C75.9278 5.792 75.7398 5.928 75.5878 6.104C75.4358 6.28 75.3198 6.488 75.2398 6.728C75.1678 6.96 75.1318 7.216 75.1318 7.496V11H74.1118V4.796ZM85.0877 7.304C85.0717 7.064 85.0157 6.836 84.9197 6.62C84.8317 6.404 84.7077 6.22 84.5477 6.068C84.3957 5.908 84.2117 5.784 83.9957 5.696C83.7877 5.6 83.5557 5.552 83.2997 5.552C83.0357 5.552 82.7957 5.6 82.5797 5.696C82.3717 5.784 82.1917 5.908 82.0397 6.068C81.8877 6.228 81.7677 6.416 81.6797 6.632C81.5917 6.84 81.5397 7.064 81.5237 7.304H85.0877ZM86.0717 9.032C85.9357 9.728 85.6357 10.252 85.1717 10.604C84.7077 10.956 84.1237 11.132 83.4197 11.132C82.9237 11.132 82.4917 11.052 82.1237 10.892C81.7637 10.732 81.4597 10.508 81.2117 10.22C80.9637 9.932 80.7757 9.588 80.6477 9.188C80.5277 8.788 80.4597 8.352 80.4437 7.88C80.4437 7.408 80.5157 6.976 80.6597 6.584C80.8037 6.192 81.0037 5.852 81.2597 5.564C81.5237 5.276 81.8317 5.052 82.1837 4.892C82.5437 4.732 82.9357 4.652 83.3597 4.652C83.9117 4.652 84.3677 4.768 84.7277 5C85.0957 5.224 85.3877 5.512 85.6037 5.864C85.8277 6.216 85.9797 6.6 86.0597 7.016C86.1477 7.432 86.1837 7.828 86.1677 8.204H81.5237C81.5157 8.476 81.5477 8.736 81.6197 8.984C81.6917 9.224 81.8077 9.44 81.9677 9.632C82.1277 9.816 82.3317 9.964 82.5797 10.076C82.8277 10.188 83.1197 10.244 83.4557 10.244C83.8877 10.244 84.2397 10.144 84.5117 9.944C84.7917 9.744 84.9757 9.44 85.0637 9.032H86.0717ZM91.533 7.304C91.517 7.064 91.461 6.836 91.365 6.62C91.277 6.404 91.153 6.22 90.993 6.068C90.841 5.908 90.657 5.784 90.441 5.696C90.233 5.6 90.001 5.552 89.745 5.552C89.481 5.552 89.241 5.6 89.025 5.696C88.817 5.784 88.637 5.908 88.485 6.068C88.333 6.228 88.213 6.416 88.125 6.632C88.037 6.84 87.985 7.064 87.969 7.304H91.533ZM92.517 9.032C92.381 9.728 92.081 10.252 91.617 10.604C91.153 10.956 90.569 11.132 89.865 11.132C89.369 11.132 88.937 11.052 88.569 10.892C88.209 10.732 87.905 10.508 87.657 10.22C87.409 9.932 87.221 9.588 87.093 9.188C86.973 8.788 86.905 8.352 86.889 7.88C86.889 7.408 86.961 6.976 87.105 6.584C87.249 6.192 87.449 5.852 87.705 5.564C87.969 5.276 88.277 5.052 88.629 4.892C88.989 4.732 89.381 4.652 89.805 4.652C90.357 4.652 90.813 4.768 91.173 5C91.541 5.224 91.833 5.512 92.049 5.864C92.273 6.216 92.425 6.6 92.505 7.016C92.593 7.432 92.629 7.828 92.613 8.204H87.969C87.961 8.476 87.993 8.736 88.065 8.984C88.137 9.224 88.253 9.44 88.413 9.632C88.573 9.816 88.777 9.964 89.025 10.076C89.273 10.188 89.565 10.244 89.901 10.244C90.333 10.244 90.685 10.144 90.957 9.944C91.237 9.744 91.421 9.44 91.509 9.032H92.517ZM93.6343 4.796H94.5943V6.104H94.6183C94.8663 5.6 95.1703 5.228 95.5303 4.988C95.8903 4.748 96.3463 4.636 96.8983 4.652V5.732C96.4903 5.732 96.1423 5.788 95.8543 5.9C95.5663 6.012 95.3343 6.176 95.1583 6.392C94.9823 6.608 94.8543 6.872 94.7743 7.184C94.6943 7.488 94.6543 7.84 94.6543 8.24V11H93.6343V4.796ZM98.7464 3.68H97.7264V2.432H98.7464V3.68ZM97.7264 4.796H98.7464V11H97.7264V4.796ZM100.327 4.796H101.287V5.78H101.311C101.735 5.028 102.407 4.652 103.327 4.652C103.735 4.652 104.075 4.708 104.347 4.82C104.619 4.932 104.839 5.088 105.007 5.288C105.175 5.488 105.291 5.728 105.355 6.008C105.427 6.28 105.463 6.584 105.463 6.92V11H104.443V6.8C104.443 6.416 104.331 6.112 104.107 5.888C103.883 5.664 103.575 5.552 103.183 5.552C102.871 5.552 102.599 5.6 102.367 5.696C102.143 5.792 101.955 5.928 101.803 6.104C101.651 6.28 101.535 6.488 101.455 6.728C101.383 6.96 101.347 7.216 101.347 7.496V11H100.327V4.796ZM112.347 10.472C112.347 11.488 112.115 12.248 111.651 12.752C111.187 13.256 110.459 13.508 109.467 13.508C109.179 13.508 108.883 13.476 108.579 13.412C108.283 13.348 108.011 13.244 107.763 13.1C107.523 12.956 107.323 12.768 107.163 12.536C107.003 12.304 106.915 12.02 106.899 11.684H107.919C107.927 11.868 107.983 12.024 108.087 12.152C108.199 12.28 108.331 12.384 108.483 12.464C108.643 12.544 108.815 12.6 108.999 12.632C109.183 12.672 109.359 12.692 109.527 12.692C109.863 12.692 110.147 12.632 110.379 12.512C110.611 12.4 110.803 12.24 110.955 12.032C111.107 11.832 111.215 11.588 111.279 11.3C111.351 11.012 111.387 10.696 111.387 10.352V9.944H111.363C111.187 10.328 110.919 10.612 110.559 10.796C110.207 10.972 109.831 11.06 109.431 11.06C108.967 11.06 108.563 10.976 108.219 10.808C107.875 10.64 107.587 10.416 107.355 10.136C107.123 9.848 106.947 9.516 106.827 9.14C106.715 8.756 106.659 8.352 106.659 7.928C106.659 7.56 106.707 7.184 106.803 6.8C106.899 6.408 107.059 6.056 107.283 5.744C107.507 5.424 107.803 5.164 108.171 4.964C108.539 4.756 108.991 4.652 109.527 4.652C109.919 4.652 110.279 4.74 110.607 4.916C110.935 5.084 111.191 5.34 111.375 5.684H111.387V4.796H112.347V10.472ZM109.491 10.172C109.827 10.172 110.111 10.104 110.343 9.968C110.583 9.824 110.775 9.64 110.919 9.416C111.063 9.184 111.167 8.924 111.231 8.636C111.303 8.348 111.339 8.06 111.339 7.772C111.339 7.5 111.307 7.232 111.243 6.968C111.179 6.704 111.075 6.468 110.931 6.26C110.795 6.044 110.615 5.872 110.391 5.744C110.167 5.616 109.895 5.552 109.575 5.552C109.247 5.552 108.967 5.616 108.735 5.744C108.503 5.864 108.311 6.028 108.159 6.236C108.015 6.444 107.907 6.684 107.835 6.956C107.771 7.228 107.739 7.512 107.739 7.808C107.739 8.088 107.767 8.368 107.823 8.648C107.879 8.928 107.975 9.184 108.111 9.416C108.247 9.64 108.427 9.824 108.651 9.968C108.875 10.104 109.155 10.172 109.491 10.172Z" fill="white"></path>
+<circle cx="1" cy="3" fill="white" r="1"></circle>
+<circle cx="8" cy="10" fill="white" r="1"></circle>
+<circle cx="8" cy="3" fill="white" r="1"></circle>
+<circle cx="1" cy="10" fill="white" r="1"></circle>
+<path d="M7.90621 2.25345C7.93843 2.16639 8.06157 2.16639 8.09379 2.25345L8.25413 2.68679C8.26426 2.71416 8.28584 2.73574 8.31322 2.74587L8.74655 2.90621C8.83361 2.93843 8.83361 3.06157 8.74655 3.09379L8.31321 3.25413C8.28584 3.26426 8.26426 3.28584 8.25413 3.31322L8.09379 3.74655C8.06157 3.83361 7.93843 3.83361 7.90621 3.74655L7.74587 3.31321C7.73574 3.28584 7.71416 3.26426 7.68679 3.25413L7.25345 3.09379C7.16639 3.06157 7.16639 2.93843 7.25345 2.90621L7.68679 2.74587C7.71416 2.73574 7.73574 2.71416 7.74587 2.68679L7.90621 2.25345Z" fill="white"></path>
+</svg></a>
+<nav class="nav"><a href="index.html">Manifesto</a><a href="one-pager.html">One-pager</a><a class="here" href="investment-memo.html">Investment memo</a></nav>
+</div></header>
+
+<main class="wrap">
+
+<section class="hero">
+<h1 class="title">Investment Memo</h1>
+<p class="lede"><span class="hot">The machine is built and running.</span> The first commercial system turns on in September. This round buys the road to the factory.</p>
+<p class="refs">The full thesis is in the <a href="index.html">manifesto</a>. The numbers and what's already built are in the <a href="one-pager.html">one-pager</a>. This memo is the plan.</p>
+</section>
+
+<section class="s">
+<div class="s-head"><h2>The plan.</h2></div>
+<p><strong>Now → end of September: engineer the 5 MW system, subcomponent by subcomponent.</strong> Everything we got from building the 1 MW machine — call them mistakes, not learnings, because mistakes is what they were — goes into a V2 stack, developed on parallel test rigs built for exactly that. Next to the stack work sits the <strong>scale optimization team</strong>: people whose job is to break pipes and pumps all day, until every balance-of-plant component is cheap, simple, and easy to mass-produce.</p>
+<p>The organization runs like the machine. Every subcomponent of the 5 MW system has one lead, and that lead has one priority: make the component work. One system lead orchestrates the whole — owns the interfaces between subcomponents, makes sure everything links. When a subcomponent works, it gets delivered to the system lead, who builds the module. The 5 MW module is the 1 MW machine with a lot of new stuff — <strong>up and running by end of September, targeting sub-$60/kW.</strong></p>
+<p><strong>Q4: iterate the 5 MW module to its final form.</strong> The scale optimization team keeps pushing every component toward manufacturability. When the module is final, we hire manufacturing people — and because the components are already designed to be mass-produced, their job is not to redesign the product. It is to design the factory that builds it.</p>
+<p><strong>2027: construct the factory.</strong> Factory construction starts in 2027, funded by a Series A raised early 2027.</p>
+<p><strong>In parallel, starting August: the commercial machine.</strong> Sales people and the government network we already have go around the world building relationships in person — with governments, with energy companies. There is dedicated budget for lobbying and for pushing deals through quickly. At the same time we start the permits and the legal groundwork for each molecule site around the world, so that when the machines are ready, the sites are too.</p>
+<p><strong>Business model: own and operate.</strong> We build the machine, own the asset, sell the molecule — hydrogen, then ammonia at grey parity, then methanol and olefins, then combustion. The customer never buys an electrolyzer. They buy the thing they already buy today, cheaper.</p>
+</section>
+
+<hr class="rule"/>
+
+<section class="s">
+<div class="s-head"><h2>How it scales.</h2></div>
+<ul class="beliefs">
+<li><strong>Number up, never scale up.</strong> The 1 MW stack is the only production unit. A 5 MW module is five of them in a container. A GW site is the same container repeated. Every unit built makes the next one cheaper instead of riskier.</li>
+<li><strong>The hygiene is being set.</strong> These past months taught us more about the structure of the company than anything before. We are writing all of it down — every process, every route, every decision — and setting the hygiene of the company: clear ownership, documentation as a deliverable, defined manufacturing routes, purchasing, QC. What is in our heads is becoming something other people can learn from and build on. That is what lets the team work as a structured system instead of a set of heroes.</li>
+<li><strong>The factory is the real product.</strong> Each insourced component deletes a vendor's ~20% margin, then mass-production learning rate cuts it again.</li>
+<li><strong>20–30 people run the whole company</strong> while comparables run 100+ per 10 MW.</li>
+<li><strong>Capital compounds the same way.</strong> This seed buys the module and the relationships. The factory is financed by the Series A; the deployment fleets against running modules and signed offtakes — every stage collateralized by the one before it.</li>
+</ul>
+</section>
+
+<hr class="rule"/>
+
+<section class="s">
+<div class="s-head"><h2>The moat.</h2></div>
+<ol class="numbered">
+<li><strong>Incumbents must obsolete their own product line to follow.</strong> Their machines, doctrine and installed base are built for expensive grid power running flat-out. They've watched the solar curve for a decade and done nothing.</li>
+<li><strong>The knowledge doesn't transfer.</strong> Tear down our machine and you find cheap plastic and bare nickel. The moat is the route: the process, the manuals, the supplier map. It lives in the company and nowhere else.</li>
+<li><strong>The lead compounds.</strong> A follower starting today starts at our year-zero cost while we ride the learning curve down. In manufacturing the gap between first and second never closes.</li>
+<li><strong>Geography gets claimed once.</strong> 3,747 prime sites. First mover signs the land, the seawater, the ports, the offtake. At $0.74/kg, the price itself is the moat.</li>
+</ol>
+</section>
+
+<hr class="rule"/>
+
+<section class="s">
+<div class="s-head"><h2>Market.</h2></div>
+<p>Energy is the largest market on Earth. <strong>79% of it is molecules.</strong></p>
+<ul class="beliefs">
+<li><strong>TAM: $10T</strong> — the global energy market.</li>
+<li><strong>SAM: $6T</strong> — the molecular energy and feedstock economy our machines address.</li>
+<li><strong>SOM: $500B in the next five years.</strong> Then we take the full $6T.</li>
+</ul>
+<p>We are trading commodities. Ammonia, methanol, fuel — bought on one number, price, and shipped all around the world. When our molecule lands under theirs, the market crosses over on its own — and nobody switches back.</p>
+</section>
+
+<hr class="rule"/>
+
+<section class="s">
+<div class="s-head"><h2>Team.</h2></div>
+<p>Six builders, obsessive since childhood, who left every institution that tried to slow them down.</p>
+<ul class="beliefs">
+<li><strong>Nils — co-founder, CEO.</strong> Building electrolyzers since age 12. Built his own lab at 16 in his grandparents' henhouse because the university wouldn't let him in; got in at 17, quit after two weeks because the supervisor was too slow. Seven years of electrolysis. He's 19.</li>
+<li><strong>Oliver — co-founder.</strong> Built a robot at 12 doing what Boston Dynamics does, on a tenth of the budget. Ran KTH at 200% pace, demanded 400%, was refused, walked — then hit year-five med-school research level in six months and walked from that too.</li>
+<li><strong>Jacob — co-founder.</strong> Scheming with Nils since middle school — they wrote a 200-page hydrogen manifesto before either could drive. Has since started companies from consumer products to nuclear.</li>
+<li><strong>Mohammad.</strong> Programming at 8 because no game was good enough, so he built his own. Two master's degrees by 22, a machine-learning PhD by 25, and a healthy hatred of academia.</li>
+<li><strong>William.</strong> Spent his life disassembling cars and rebuilding them. Makes the gap between idea and physical prototype disappear.</li>
+</ul>
+<p>This team walked 80% of the world's operating electrolyzer sites, sat the incumbent CEOs around one dinner table in Rotterdam, confirmed first-hand that nobody in this industry is trying to win — then built, in six weeks, the machine the industry said needed a decade.</p>
+</section>
+
+<hr class="rule"/>
+
+<section class="s">
+<div class="s-head"><h2>The raise.</h2></div>
+<p>The money goes into two things: <strong>a great 5 MW module</strong>, and <strong>relationships</strong> — great people flying around the world, meeting governments and energy companies in person, with budget for lobbying and for closing deals fast.</p>
+<p><strong>Four goals in the next six months:</strong></p>
+<ol class="numbered">
+<li><strong>The stack below $60/kW.</strong></li>
+<li><strong>The 5 MW module up and running</strong> — end of September.</li>
+<li><strong>At least 10 GW of signed offtake agreements.</strong></li>
+<li><strong>The factory started</strong> — manufacturing hires, factory design, construction from early 2027 behind the Series A.</li>
+</ol>
+<p><strong>Hiring maps straight onto the goals:</strong></p>
+<div class="tbl-wrap"><table class="data">
+<thead><tr><th>Goal</th><th>Who we hire</th></tr></thead>
+<tbody>
+<tr><td>Sub-$60/kW</td><td>Stack R&amp;D engineers (fluid dynamics lives here) · scale &amp; test engineers — manufacturability and balance of plant · electronics engineer — sensing and controls · plant engineer · power-electronics engineer</td></tr>
+<tr><td>10 GW of offtakes</td><td>Senior salespeople who know this industry deeply · sales analysts for the groundwork · regulatory &amp; certification owner · project developer — finds the sites, develops the sites. Government &amp; relationship affairs already signed: <strong>Dr. Stefan Kaufmann</strong>, Germany's former Federal Innovation Commissioner for Green Hydrogen</td></tr>
+<tr><td>The factory</td><td>Manufacturing engineers · procurement engineers to enable logistics</td></tr>
+<tr><td>Core hygiene</td><td>Admin · marketing and general branding</td></tr>
+</tbody>
+</table></div>
+<p>One hiring bar, no exceptions: people who build on their own time, pulled from the fastest hardware environments on Earth — motorsport, space, drones, EV. Never from legacy hydrogen; that's where the industry's bad habits live. Delaware C-corp, dual-class, founders locked under a ten-year agreement — the people who built the machine with their own hands are contractually all-in.</p>
+</section>
+
+<hr class="rule"/>
+
+<section class="s">
+<div class="s-head"><h2>The ask.</h2></div>
+<p>Join us in building the largest energy company the world has ever seen. If you are reading this, we have already talked — you know the machine is real, and you know what we are going to do with it.</p>
+<p class="punch">The only question left is whether you are in <span class="a">before September</span> or after it.</p>
+</section>
+
+</main>
+
+<footer class="foot">
+<a href="index.html">Read the full manifesto</a>
+<a href="one-pager.html">Read the one-pager</a>
+<div class="sig">Lavoit</div>
+</footer>
+</body></html>
