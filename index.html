@@ -20,6 +20,7 @@ svg.logo{height:15px;width:auto;display:block;}
 .nav{display:flex;gap:30px;font-size:0.82rem;font-weight:400;}
 .nav a{color:var(--tx-mut);text-decoration:none;transition:color .2s;}
 .nav a:hover{color:var(--tx-bright);}
+.nav a.here{color:var(--tx-bright);}
 
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 clamp(22px,5vw,56px);}
 .rule{border:none;border-top:1px solid var(--line);margin:0;}
@@ -147,7 +148,7 @@ table.data tr.hl td.win{color:var(--accent);}
 
 @media(max-width:680px){
   body{font-size:1.0rem;line-height:1.7;}
-  .nav{display:none;}
+  .nav{gap:18px;font-size:0.78rem;}
   .s-num,.s-head h2{font-size:1.32rem;}
   section.s{padding:58px 0;}
   .hero .lede{font-size:1.18rem;}
@@ -207,7 +208,7 @@ table.data tr.hl td.win{color:var(--accent);}
 <circle cx="1" cy="10" fill="white" r="1"></circle>
 <path d="M7.90621 2.25345C7.93843 2.16639 8.06157 2.16639 8.09379 2.25345L8.25413 2.68679C8.26426 2.71416 8.28584 2.73574 8.31322 2.74587L8.74655 2.90621C8.83361 2.93843 8.83361 3.06157 8.74655 3.09379L8.31321 3.25413C8.28584 3.26426 8.26426 3.28584 8.25413 3.31322L8.09379 3.74655C8.06157 3.83361 7.93843 3.83361 7.90621 3.74655L7.74587 3.31321C7.73574 3.28584 7.71416 3.26426 7.68679 3.25413L7.25345 3.09379C7.16639 3.06157 7.16639 2.93843 7.25345 2.90621L7.68679 2.74587C7.71416 2.73574 7.73574 2.71416 7.74587 2.68679L7.90621 2.25345Z" fill="white"></path>
 </svg>
-<nav class="nav"><a href="#thesis">Thesis</a><a href="#machine">The machine</a><a href="#plan">Masterplan</a><a href="#moat">Moat</a><a href="one-pager.html">One-pager</a><a href="investment-memo.html">Investment memo</a></nav>
+<nav class="nav"><a class="here" href="index.html">Manifesto</a><a href="one-pager.html">One-pager</a><a href="investment-memo.html">Investment memo</a></nav>
 </div></header>
 <section class="hero wrap-x">
 <div class="wrap">
