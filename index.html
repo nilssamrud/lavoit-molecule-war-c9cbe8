@@ -300,56 +300,6 @@ table.data tr.hl td.win{color:var(--accent);}
 <p>The chemistry stayed deliberately familiar: zero-gap alkaline, bare nickel foam, 30% KOH at 80–90°C and atmospheric operation. These are ordinary materials with known behaviour. They can be bought in volume, handled by normal factories and replaced without waiting for a laboratory breakthrough.</p>
 <p>The real work happened in the parts. We replaced machined stainless bipolar plates with injection-moulded plastic and stamped metal sheets. A part that spent hours on a CNC machine could come out of a mould in seconds. Most of the stack cost disappeared with that change.</p>
 <p>We saw the same pattern in something as small as a pipe fitting. Two stainless nipples from the same manufacturer performed the same function. One was cut from commodity tube and threaded. The other was machined from a hexagonal bar and cost six times more. That sixfold gap came entirely from the manufacturing route.</p>
-<div class="chart">
-<svg aria-labelledby="component-cost-title component-cost-desc" role="img" viewBox="0 0 1400 600" xmlns="http://www.w3.org/2000/svg">
-  <title id="component-cost-title">Process cost and idiot index</title>
-  <desc id="component-cost-desc">A quiet dark chart comparing a threaded nipple manufacturing route and a PP-H elbow finished price against raw plastic cost.</desc>
-  <style>
-    .component-cost-chart text { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; }
-    .component-cost-chart .bg { fill: #0a0a0a; }
-    .component-cost-chart .rule { stroke: #1c1c1c; stroke-width: 1.2; }
-    .component-cost-chart .bar-dim { fill: #4a4a4a; }
-    .component-cost-chart .bar-hot { fill: #F4DF50; }
-    .component-cost-chart .h { fill: #ffffff; font-size: 40px; }
-    .component-cost-chart .sub { fill: #8f8f8f; font-size: 19px; }
-    .component-cost-chart .label { fill: #8f8f8f; font-size: 20px; }
-    .component-cost-chart .value { fill: #d8d8d8; font-size: 24px; }
-    .component-cost-chart .ink { fill: #0a0a0a; }
-    .component-cost-chart .ratio { fill: #F4DF50; font-size: 64px; font-weight: 400; }
-    .component-cost-chart .note { fill: #8f8f8f; font-size: 18px; }
-  </style>
-  <g class="component-cost-chart">
-    <rect class="bg" height="600" width="1400"/>
-    <text class="h" x="70" y="72">Process cost</text>
-    <text class="sub" x="70" y="112">Manufacturing route drives the price.</text>
-    <line class="rule" x1="70" x2="1330" y1="152" y2="152"/>
-    <line class="rule" x1="700" x2="700" y1="178" y2="480"/>
-    <g transform="translate(70 205)">
-      <text class="label" x="0" y="0">CNC machined hex nipple</text>
-      <rect class="bar-dim" height="72" width="500" x="0" y="26"/>
-      <text class="value" x="522" y="72">$160</text>
-      <text class="label" x="0" y="162">Cut tube + threaded nipple</text>
-      <rect class="bar-hot" height="72" width="84" x="0" y="188"/>
-      <text class="value" x="106" y="234">$27</text>
-      <text class="ratio" text-anchor="end" x="500" y="246">5.9x</text>
-      <text class="note" x="0" y="374">Same alloy. Same connection. Different route.</text>
-    </g>
-    <g transform="translate(760 205)">
-      <text class="label" x="0" y="0">Finished PP-H 90 deg elbow</text>
-      <rect class="bar-hot" height="72" width="500" x="0" y="26"/>
-      <text class="value ink" x="24" y="72">$70</text>
-      <text class="label" x="0" y="162">Raw plastic in the part</text>
-      <rect class="bar-dim" height="72" width="8" x="0" y="188"/>
-      <circle class="bar-hot" cx="8" cy="224" r="8"/>
-      <text class="value" x="34" y="234">~$0.50</text>
-      <text class="ratio" text-anchor="end" x="500" y="246">~140x</text>
-      <text class="note" x="0" y="374">Most of the price comes from manufacturing.</text>
-    </g>
-    <text class="sub" x="70" y="555">Prices rounded. PP-H material: 200 g at $2.50/kg.</text>
-  </g>
-</svg>
-<div class="cap">Illustrative procurement check: Nords International Sweden AB 316L / 1.4404 stainless nipples and a standard PP-H 90° elbow. Prices rounded and used to show cost structure, not as a live quote.</div>
-</div>
 <p>We followed the idiot index through the rest of the system. Stainless piping became plastic socket-fusion pipe. Custom separation vessels became commodity pressure vessels. We used mag-drive pumps and built the dry coolers ourselves. None of these changes needed new chemistry. They needed the patience to look at every invoice and ask why.</p>
 <p>Then four of us built the full machine. We went from the first P&amp;ID to a commissioned 1 MW site in six weeks. Materials, manufacturing and electrical installation came to $120/kW all-in.</p>
 <p>The build taught us what the drawings could not. CNC machines failed in the middle of a run. Cell components behaved differently at volume. Connectors took too long to solder. Flow channels that looked obvious on paper were not obvious in steel and plastic. Even getting power to the site became an engineering problem; we moved quicker than the grid could handle.</p>
@@ -357,7 +307,7 @@ table.data tr.hl td.win{color:var(--accent);}
 <p>The hardest lesson was process. We had drawings for every part and almost no instructions for the order of work. Each missing instruction became a phone call, a person standing still or a day lost. The balance of plant could have gone together in three days; it took nearly two weeks.</p>
 <p>We are writing the next build as a manual. Ownership, purchasing, assembly order and quality control now exist outside the founders’ heads. The first machine needed heroic effort; the next one needs a process that a team of people can repeat.</p>
 <p>The commercial module puts five identical 1 MW stacks in one road-legal container. We grow by making more of the same stack, because repetition is what turns a machine into a product. The first 5 MW system will be operating in September at a target below $60/kW.</p>
-<div class="chart"><img alt="Electrolyzer CAPEX comparison" src="assets/electrolyzer_capex_helvetica.png"/></div>
+<div class="chart"><img alt="Electrolyzer CAPEX comparison" src="assets/electrolyzer_capex_helvetica.svg"/></div>
 <p>Put that machine on direct solar and the two cost curves meet: the cheapest electrolyzer we can build, running on the cheapest electricity we can find.</p>
 <div class="tbl-wrap"><table class="data">
 <thead><tr><th>Parameter</th><th>S1 · EU grid + Inc.</th><th>S2 · Solar + Inc.</th><th>S3 · EU grid + Lavoit</th><th>S4 · Solar + Lavoit</th></tr></thead>

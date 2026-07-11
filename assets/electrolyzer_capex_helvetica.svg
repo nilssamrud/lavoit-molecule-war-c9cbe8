@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 790" role="img" aria-labelledby="capex-title capex-desc">
+  <title id="capex-title">Electrolyzer CAPEX</title>
+  <desc id="capex-desc">Horizontal bar chart comparing incumbent electrolyzer CAPEX, V0.1, and the V1 target in dollars per kilowatt.</desc>
+  <style>
+    text { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; }
+    .bg { fill: #0a0a0a; }
+    .rule { stroke: #1c1c1c; stroke-width: 1.2; }
+    .grid { stroke: #1f1f1f; stroke-width: 1; }
+    .dim { fill: #4a4a4a; }
+    .dim2 { fill: #333333; }
+    .hot { fill: #F4DF50; }
+    .gold { fill: #d1b936; }
+    .title { fill: #ffffff; font-size: 40px; }
+    .label { fill: #8f8f8f; font-size: 20px; }
+    .tick { fill: #696969; font-size: 18px; }
+    .value { fill: #d8d8d8; font-size: 22px; }
+    .axis-label { fill: #8f8f8f; font-size: 20px; }
+  </style>
+  <rect class="bg" height="790" width="1400"/>
+  <text class="title" x="150" y="76">Electrolyzer CAPEX</text>
+  <line class="rule" x1="150" x2="1280" y1="112" y2="112"/>
+
+  <g transform="translate(250 150)">
+    <line class="grid" x1="0" x2="0" y1="0" y2="500"/>
+    <line class="grid" x1="200" x2="200" y1="0" y2="500"/>
+    <line class="grid" x1="400" x2="400" y1="0" y2="500"/>
+    <line class="grid" x1="600" x2="600" y1="0" y2="500"/>
+    <line class="grid" x1="800" x2="800" y1="0" y2="500"/>
+    <line class="grid" x1="1000" x2="1000" y1="0" y2="500"/>
+
+    <text class="label" text-anchor="end" x="-32" y="78">Incumbent</text>
+    <text class="label" text-anchor="end" x="-32" y="104">range</text>
+    <rect class="dim2" height="88" width="600" x="0" y="30"/>
+    <rect class="dim" height="88" width="360" x="600" y="30"/>
+    <text class="value" text-anchor="end" x="994" y="86">$1,500-2,400/kW</text>
+
+    <text class="label" text-anchor="end" x="-32" y="273">V0.1</text>
+    <rect class="gold" height="88" width="48" x="0" y="218"/>
+    <text class="value" x="122" y="277">$120/kW</text>
+
+    <text class="label" text-anchor="end" x="-32" y="444">V1 target</text>
+    <rect class="hot" height="88" width="24" x="0" y="400"/>
+    <text class="value" x="122" y="459">sub-$60/kW</text>
+
+    <line class="rule" x1="0" x2="1050" y1="500" y2="500"/>
+    <text class="tick" text-anchor="middle" x="0" y="534">0</text>
+    <text class="tick" text-anchor="middle" x="200" y="534">500</text>
+    <text class="tick" text-anchor="middle" x="400" y="534">1000</text>
+    <text class="tick" text-anchor="middle" x="600" y="534">1500</text>
+    <text class="tick" text-anchor="middle" x="800" y="534">2000</text>
+    <text class="tick" text-anchor="middle" x="1000" y="534">2500</text>
+    <text class="axis-label" text-anchor="middle" x="525" y="562">$/kW</text>
+  </g>
+  <text class="tick" x="150" y="762">Incumbent range: BloombergNEF 2025 — European alkaline systems ~$2,400/kW installed; China stripped-down systems ~$540/kW.</text>
+</svg>
