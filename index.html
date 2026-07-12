@@ -2,17 +2,17 @@
 <html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Molecule War — Lavoit</title><style>
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
 :root{
-  --bg:#F6F7F4; --tx:#343632; --tx-bright:#11120f; --tx-mut:#686a64; --tx-faint:#94978f;
-  --line:#D9DBD5; --accent:#9A7B00; --wrap:1080px; --measure:780px;
+  --bg:#0a0a0a; --tx:#cdcdcd; --tx-bright:#ffffff; --tx-mut:#8f8f8f; --tx-faint:#5a5a5a;
+  --line:#1c1c1c; --accent:#F4DF50; --wrap:1080px; --measure:780px;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;scroll-padding-top:88px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
 body{background:var(--bg);color:var(--tx);
   font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;
   font-size:1.05rem;line-height:1.72;overflow-x:hidden;}
-::selection{background:#E7D46A;color:#11120f;}
+::selection{background:var(--accent);color:#0a0a0a;}
 
-.bar{position:sticky;top:0;z-index:50;background:rgba(246,247,244,0.86);
+.bar{position:sticky;top:0;z-index:50;background:rgba(10,10,10,0.72);
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
 .bar-in{max-width:var(--wrap);margin:0 auto;padding:18px clamp(22px,5vw,56px);
   display:flex;align-items:center;justify-content:space-between;}
@@ -39,7 +39,7 @@ svg.logo{height:15px;width:auto;display:block;}
   max-width:1000px;margin:0 auto 22px;letter-spacing:-0.01em;}
 .hero .lede{font-family:'Nanum Myeongjo',serif;font-weight:400;
   font-size:clamp(1.28rem,2.4vw,1.55rem);
-  font-size:1.5rem;line-height:1.5;color:#555750;max-width:1000px;margin-left:auto;margin-right:auto;}
+  font-size:1.5rem;line-height:1.5;color:#b3b3b3;max-width:1000px;margin-left:auto;margin-right:auto;}
 .hero .lede .hot{color:var(--tx-bright);}
 .hero-art{margin-top:52px;margin-bottom:0;}
 
@@ -67,7 +67,6 @@ section.s p em{font-style:italic;}
   font-size:0.78rem;line-height:1.55;color:var(--tx-mut);margin:12px auto 0;max-width:var(--measure);}
 .chart{max-width:var(--wrap);margin:78px auto;padding:0 clamp(22px,5vw,56px);}
 .chart img,.chart svg{width:100%;display:block;border:1px solid var(--line);background:var(--bg);}
-.chart img[src^="data:image/png"],.solar-card img[src^="data:image/png"]{filter:invert(1) hue-rotate(180deg);}
 
 /* contained factory figure */
 .factory-contained{
@@ -125,7 +124,7 @@ section.s p em{font-style:italic;}
 .tl-i{position:relative;margin-bottom:30px;}
 .tl-i::before{content:'';position:absolute;left:-30px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:1px solid var(--tx-faint);}
 .tl-i.done::before{background:var(--accent);border-color:var(--accent);}
-.tl-i .d{font-size:0.82rem;font-weight:400;color:#2e302c;}
+.tl-i .d{font-size:0.82rem;font-weight:400;color:#dcdcdc;}
 .tl-i .e{color:var(--tx-bright);font-size:1.0rem;margin-top:2px;}
 .tl-i .x{font-size:0.9rem;line-height:1.6;color:var(--tx-mut);margin-top:4px;}
 

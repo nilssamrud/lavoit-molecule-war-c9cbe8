@@ -3,18 +3,18 @@
   <desc id="capex-desc">Horizontal bar chart comparing incumbent electrolyzer CAPEX, V0.1, and the V1 target in dollars per kilowatt.</desc>
   <style>
     text { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; }
-    .bg { fill: #F6F7F4; }
-    .rule { stroke: #D9DBD5; stroke-width: 1.2; }
-    .grid { stroke: #E3E4DF; stroke-width: 1; }
-    .dim { fill: #8D9088; }
-    .dim2 { fill: #5F625C; }
-    .hot { fill: #E0C533; }
-    .gold { fill: #B49A18; }
-    .title { fill: #11120F; font-size: 40px; }
-    .label { fill: #686A64; font-size: 20px; }
-    .tick { fill: #85887F; font-size: 18px; }
-    .value { fill: #2D2F2B; font-size: 22px; }
-    .axis-label { fill: #686A64; font-size: 20px; }
+    .bg { fill: #0a0a0a; }
+    .rule { stroke: #1c1c1c; stroke-width: 1.2; }
+    .grid { stroke: #1f1f1f; stroke-width: 1; }
+    .dim { fill: #4a4a4a; }
+    .dim2 { fill: #333333; }
+    .hot { fill: #F4DF50; }
+    .gold { fill: #d1b936; }
+    .title { fill: #ffffff; font-size: 40px; }
+    .label { fill: #8f8f8f; font-size: 20px; }
+    .tick { fill: #696969; font-size: 18px; }
+    .value { fill: #d8d8d8; font-size: 22px; }
+    .axis-label { fill: #8f8f8f; font-size: 20px; }
   </style>
   <rect class="bg" height="790" width="1400"/>
   <text class="title" x="150" y="76">Electrolyzer CAPEX</text>

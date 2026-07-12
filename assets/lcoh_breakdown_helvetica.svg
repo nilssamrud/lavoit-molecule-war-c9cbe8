@@ -3,19 +3,19 @@
   <desc id="lcoh-desc">Stacked bar chart splitting incumbent electrolytic hydrogen cost into electricity, machine capex and OPEX, on grid power versus cheap solar, against the natural gas benchmark.</desc>
   <style>
     text { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; }
-    .bg { fill: #F6F7F4; }
-    .rule { stroke: #D9DBD5; stroke-width: 1.2; }
-    .elec { fill: #E0C533; }
-    .capex { fill: #8D9088; }
-    .opex { fill: #C4C6C0; }
-    .smr-lo { fill: #5F625C; }
-    .smr-hi { fill: #8D9088; }
-    .title { fill: #11120F; font-size: 40px; }
-    .sub { fill: #686A64; font-size: 19px; }
-    .label { fill: #686A64; font-size: 20px; }
-    .value { fill: #2D2F2B; font-size: 24px; }
-    .note { fill: #85887F; font-size: 18px; }
-    .legend { fill: #686A64; font-size: 19px; }
+    .bg { fill: #0a0a0a; }
+    .rule { stroke: #1c1c1c; stroke-width: 1.2; }
+    .elec { fill: #F4DF50; }
+    .capex { fill: #5a5a5a; }
+    .opex { fill: #303030; }
+    .smr-lo { fill: #333333; }
+    .smr-hi { fill: #4a4a4a; }
+    .title { fill: #ffffff; font-size: 40px; }
+    .sub { fill: #8f8f8f; font-size: 19px; }
+    .label { fill: #8f8f8f; font-size: 20px; }
+    .value { fill: #d8d8d8; font-size: 24px; }
+    .note { fill: #5a5a5a; font-size: 18px; }
+    .legend { fill: #8f8f8f; font-size: 19px; }
   </style>
   <rect class="bg" width="1400" height="760"/>
 
