@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760" role="img" aria-labelledby="lcoh-title lcoh-desc">
+  <title id="lcoh-title">What a kilogram of hydrogen costs</title>
+  <desc id="lcoh-desc">Stacked bar chart splitting incumbent electrolytic hydrogen cost into electricity, machine capex and OPEX, on grid power versus cheap solar, against the natural gas benchmark.</desc>
+  <style>
+    text { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; }
+    .bg { fill: #F6F7F4; }
+    .rule { stroke: #D9DBD5; stroke-width: 1.2; }
+    .elec { fill: #E0C533; }
+    .capex { fill: #8D9088; }
+    .opex { fill: #C4C6C0; }
+    .smr-lo { fill: #5F625C; }
+    .smr-hi { fill: #8D9088; }
+    .title { fill: #11120F; font-size: 40px; }
+    .sub { fill: #686A64; font-size: 19px; }
+    .label { fill: #686A64; font-size: 20px; }
+    .value { fill: #2D2F2B; font-size: 24px; }
+    .note { fill: #85887F; font-size: 18px; }
+    .legend { fill: #686A64; font-size: 19px; }
+  </style>
+  <rect class="bg" width="1400" height="760"/>
+
+  <text class="title" x="70" y="72">What a kilogram of hydrogen costs</text>
+  <text class="sub" x="70" y="112">Electricity in, machine capital, upkeep. Same incumbent machine, two power sources.</text>
+  <line class="rule" x1="70" x2="1330" y1="152" y2="152"/>
+
+  <!-- scale: 160 px per $/kg -->
+  <text class="label" x="70" y="212">Hydrogen from natural gas (SMR)</text>
+  <rect class="smr-lo" x="70" y="228" width="112" height="64"/>
+  <rect class="smr-hi" x="182" y="228" width="208" height="64"/>
+  <text class="value" x="412" y="268">$0.7-2/kg</text>
+
+  <text class="label" x="70" y="357">Electrolyzer on grid power - 8,000 full-load hours</text>
+  <rect class="elec" x="70" y="373" width="504" height="64"/>
+  <rect class="capex" x="574" y="373" width="265" height="64"/>
+  <rect class="opex" x="839" y="373" width="56" height="64"/>
+  <text class="value" x="917" y="413">$5.16/kg</text>
+
+  <text class="label" x="70" y="502">Same machine on cheap solar - 2,200 full-load hours</text>
+  <rect class="elec" x="70" y="518" width="86" height="64"/>
+  <rect class="capex" x="156" y="518" width="938" height="64"/>
+  <rect class="opex" x="1094" y="518" width="192" height="64"/>
+  <text class="value" x="1300" y="558">$7.60/kg</text>
+
+  <rect class="elec" x="70" y="628" width="24" height="24"/>
+  <text class="legend" x="106" y="647">Electricity</text>
+  <rect class="capex" x="260" y="628" width="24" height="24"/>
+  <text class="legend" x="296" y="647">Machine capex</text>
+  <rect class="opex" x="520" y="628" width="24" height="24"/>
+  <text class="legend" x="556" y="647">OPEX</text>
+
+  <text class="note" x="70" y="712">Grid case: $50/MWh, $2,400/kW machine. Solar case: $8.57/MWh, same machine. WACC 7%, 25-year life. SMR range: BloombergNEF 2025, Saudi Arabia to Japan.</text>
+</svg>
