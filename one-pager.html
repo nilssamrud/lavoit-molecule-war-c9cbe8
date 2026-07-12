@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>One-Pager — Lavoit</title>
+<title>Investor Overview — Lavoit</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
 :root{
@@ -61,6 +61,9 @@ table.data td:first-child{text-align:left;color:var(--tx-mut);}
 table.data td.win{color:var(--tx-bright);}
 table.data tr.hl td{color:var(--tx-bright);}
 table.data tr.hl td.win{color:var(--accent);}
+.hires-summary th,.hires-summary td{text-align:left!important;}
+.hires-summary th:nth-child(2),.hires-summary td:nth-child(2){text-align:right!important;white-space:nowrap;}
+.hires-summary td:first-child{color:var(--tx-bright);}
 .foot{border-top:1px solid var(--line);padding:40px clamp(22px,5vw,56px);
   display:flex;flex-direction:column;align-items:center;gap:14px;}
 .foot .sig{font-size:0.8rem;color:var(--tx-faint);}
@@ -83,13 +86,13 @@ table.data tr.hl td.win{color:var(--accent);}
 <circle cx="1" cy="10" fill="white" r="1"></circle>
 <path d="M7.90621 2.25345C7.93843 2.16639 8.06157 2.16639 8.09379 2.25345L8.25413 2.68679C8.26426 2.71416 8.28584 2.73574 8.31322 2.74587L8.74655 2.90621C8.83361 2.93843 8.83361 3.06157 8.74655 3.09379L8.31321 3.25413C8.28584 3.26426 8.26426 3.28584 8.25413 3.31322L8.09379 3.74655C8.06157 3.83361 7.93843 3.83361 7.90621 3.74655L7.74587 3.31321C7.73574 3.28584 7.71416 3.26426 7.68679 3.25413L7.25345 3.09379C7.16639 3.06157 7.16639 2.93843 7.25345 2.90621L7.68679 2.74587C7.71416 2.73574 7.73574 2.71416 7.74587 2.68679L7.90621 2.25345Z" fill="white"></path>
 </svg></a>
-<nav class="nav"><a href="index.html">Manifesto</a><a class="here" href="one-pager.html">One-pager</a><a href="investment-memo.html">Investment memo</a></nav>
+<nav class="nav"><a href="index.html">Manifesto</a><a class="here" href="one-pager.html">Investor overview</a></nav>
 </div></header>
 
 <main class="wrap">
 
 <section class="hero">
-<h1 class="title">One-Pager</h1>
+<h1 class="title">Investor Overview</h1>
 <p class="lede">The greatest energy renaissance since oil has begun. <span class="hot">Lavoit will own it.</span></p>
 <p class="statline"><span class="a">1 MW built at $120/kW all-in.</span> The commercial target is below $60/kW and <span class="a">$0.74/kg hydrogen</span> on direct solar. 2 GW of LOIs signed. We are here to take the molecule economy.</p>
 </section>
@@ -137,10 +140,38 @@ table.data tr.hl td.win{color:var(--accent);}
 <hr class="rule"/>
 
 <section class="s">
+<div class="s-head"><h2>Market.</h2></div>
+<p>Energy is the largest market on Earth, and <strong>79% of final energy is molecules.</strong> Ammonia is our first market because hydrogen is already one of its largest costs. Lower hydrogen cost then opens methanol, olefins and eventually fuel.</p>
+<div class="tbl-wrap"><table class="data">
+<thead><tr><th></th><th>Size</th><th>What it is</th></tr></thead>
+<tbody>
+<tr><td>TAM</td><td><strong>$10T</strong></td><td>The global energy market</td></tr>
+<tr><td>SAM</td><td><strong>$6T</strong></td><td>The molecular energy and feedstock economy</td></tr>
+<tr><td>SOM</td><td><strong>$500B</strong></td><td>Initial five-year opportunity</td></tr>
+</tbody>
+</table></div>
+<p>These products are global commodities. A buyer needs the right specification, reliable delivery and a lower price. We intend to take the markets in order, using the same machine and factory to push cost down before entering the next.</p>
+</section>
+
+<hr class="rule"/>
+
+<section class="s">
 <div class="s-head"><h2>Traction.</h2></div>
 <ul class="beliefs">
 <li><strong>2 GW of LOIs signed</strong> for offtake and deployment.</li>
 <li><strong>Active discussions</strong> with large energy companies, explosives manufacturers and fertilizer producers.</li>
+</ul>
+</section>
+
+<hr class="rule"/>
+
+<section class="s">
+<div class="s-head"><h2>The plan.</h2></div>
+<p>The next stage has two jobs running in parallel: turn the 1 MW test system into a repeatable 5 MW product, and secure the customers and sites that justify the factory.</p>
+<ul class="beliefs">
+<li><strong>Now → September 2026.</strong> Build and test V1, apply every lesson from V0.1 and run the 5 MW module at a target below $60/kW.</li>
+<li><strong>Q4 2026.</strong> Freeze the V1 design, hire the manufacturing team, finish the factory-line design and continue signing offtake and deployment agreements.</li>
+<li><strong>Early 2027.</strong> Raise the Series A and begin construction of the first factory.</li>
 </ul>
 </section>
 
@@ -158,18 +189,52 @@ table.data tr.hl td.win{color:var(--accent);}
 <hr class="rule"/>
 
 <section class="s">
+<div class="s-head"><h2>Team.</h2></div>
+<p>Five builders and one government operator, with experience across electrolysis, robotics, software, operations and manufacturing. The team has already taken a system from its first drawing to a commissioned 1 MW site.</p>
+<ul class="beliefs">
+<li><strong>Nils Samrud, co-founder and CEO.</strong> Started building electrolyzers at 12. At 16 he built a laboratory in his grandparents' henhouse because the university would not let him in. He got in at 17 and left after two weeks because the work moved too slowly. Seven years in electrolysis. He is 19.</li>
+<li><strong>Oliver Midbrink, co-founder and CTO.</strong> Built a robot at 12 that performed work normally associated with far larger robotics teams, on a fraction of the budget. He ran KTH at twice the normal pace, asked to go faster and left when the institution could not keep up. He later reached year-five medical-research work in six months before leaving to build Lavoit.</li>
+<li><strong>Jacob Jackson, co-founder and COO.</strong> Has worked with Nils since middle school. They wrote a 200-page hydrogen manifesto before either could drive. He has since run companies across consumer products and nuclear.</li>
+<li><strong>Mohammad Nemer, founding engineer.</strong> Started programming at 8 because the games he wanted did not exist, so he built them. He completed two master's degrees by 22 and a PhD in machine learning by 25.</li>
+<li><strong>William Wahlberg, founding engineer.</strong> Spent his life taking cars apart and rebuilding them. He turns engineering ideas into physical prototypes and production systems.</li>
+<li><strong>Dr. Stefan Kaufmann, Head of government and relationship affairs.</strong> Germany's former Federal Innovation Commissioner for Green Hydrogen.</li>
+</ul>
+<p>Before building V0.1, we met with owners of more than 80% of the world's operating electrolyzer sites. We used what we learned to build the 1 MW system in six weeks and define what V1 must fix.</p>
+</section>
+
+<hr class="rule"/>
+
+<section class="s">
+<div class="s-head"><h2>The raise.</h2></div>
+<p><strong>We are raising $15M.</strong> The round is built around three measurable outcomes: run V1 below $60/kW, sign at least 10 GW of offtake and deployment agreements, and prepare the first factory for construction.</p>
+<p>The hiring plan is deliberately small. Twenty people take the company from V0.1 to a commercial module, signed deployment and a factory-ready production system.</p>
+<div class="tbl-wrap"><table class="data hires-summary">
+<thead><tr><th>Team</th><th>Hires</th><th>What they deliver</th></tr></thead>
+<tbody>
+<tr><td>Engineering</td><td>7</td><td>Stack, balance of plant, controls and power electronics</td></tr>
+<tr><td>Commercial</td><td>4</td><td>Offtake, deployment and customer groundwork</td></tr>
+<tr><td>Sites &amp; regulatory</td><td>2</td><td>Permits, certification and project development</td></tr>
+<tr><td>Manufacturing</td><td>5</td><td>Factory design, procurement and production</td></tr>
+<tr><td>Core operations</td><td>2</td><td>Administration, marketing and brand</td></tr>
+<tr class="hl"><td>Total</td><td>20</td><td>V1, 10 GW signed and a factory ready to build</td></tr>
+</tbody>
+</table></div>
+<p>This round should end with the commercial module running, customers signed and the factory ready. The Series A then funds manufacturing capacity and deployment.</p>
+</section>
+
+<hr class="rule"/>
+
+<section class="s">
 <div class="s-head"><h2>Endgame.</h2></div>
 <p>We win one contract at a time by selling the same molecule for less. Hydrogen is the entry point. From there we take ammonia, methanol, olefins and eventually fuel. Each market drives more production, lowers the cost and makes the next one easier to enter.</p>
 <p><strong>Our target is the whole molecule economy. We intend to replace incumbent production and own the system that comes after it.</strong></p>
 <p class="punch" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">This is Lavoit. Molecules are not our last war. <span style="color:var(--tx-bright);">War is just the beginning.</span></p>
-<p style="margin-top:34px;font-size:0.9rem;color:var(--tx-mut);">The plan, the goals, and the raise: <a href="investment-memo.html" style="color:var(--tx);text-decoration:underline;">read the investment memo</a>.</p>
 </section>
 
 </main>
 
 <footer class="foot">
 <a href="index.html">Read the full manifesto</a>
-<a href="investment-memo.html">Read the seed investment memo</a>
 <div class="sig">Lavoit</div>
 </footer>
 </body></html>
